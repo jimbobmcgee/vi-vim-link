@@ -7,34 +7,56 @@ Removing **vim-minimal** (e.g. after installing **vim-enhanced**) will take **su
 *However*, the package manager still complains about the missing `/usr/bin/vi`, because the package spec for **sudo** (incorrectly?) requires a *package* called **/usr/bin/vi** and only **vim-minimal** *provides* it.
 
     root@localhost ~# yum remove vim-minimal
-	 Loaded plugins: fastestmirror
-	 Resolving Dependencies
-	 --> Running transaction check
-	 ---> Package vim-minimal.x86_64 2:7.4.160-5.el7 will be erased
-	 --> Processing Dependency: /usr/bin/vi for package: sudo-1.8.23-3.el7.x86_64
-	 --> Restarting Dependency Resolution with new changes.
-	 --> Running transaction check
-	 ---> Package sudo.x86_64 0:1.8.23-3.el7 will be erased
-	 --> Finished Dependency Resolution
-
-	 Dependencies Resolved
-
-	 ==============================================================================================================
-	  Package                        Arch                 Version                   Repository                Size
-	 ==============================================================================================================
-	 Removing:
-	  vim-minimal                    x86_64               2:7.4.160-5.el7           @base                    896 k
-	 Removing for dependencies:
-	  sudo                           x86_64               1.8.23-3.el7              @base                    3.0 M
-
-	 Transaction Summary
-	 ==============================================================================================================
-	 Remove  1 Package (+1 Dependent package)
-
-	 Installed size: 3.9 M
-	 Is this ok [y/N]: n
+      Loaded plugins: fastestmirror
+      Resolving Dependencies
+      --> Running transaction check
+      ---> Package vim-minimal.x86_64 2:7.4.160-5.el7 will be erased
+      --> Processing Dependency: /usr/bin/vi for package: sudo-1.8.23-3.el7.x86_64
+      --> Restarting Dependency Resolution with new changes.
+      --> Running transaction check
+      ---> Package sudo.x86_64 0:1.8.23-3.el7 will be erased
+      --> Finished Dependency Resolution
+      
+      Dependencies Resolved
+      ==============================================================================================================
+       Package                        Arch                 Version                   Repository                Size
+      ==============================================================================================================
+      Removing:
+       vim-minimal                    x86_64               2:7.4.160-5.el7           @base                    896 k
+      Removing for dependencies:
+       sudo                           x86_64               1.8.23-3.el7              @base                    3.0 M
+       
+      Transaction Summary
+      ==============================================================================================================
+      Remove  1 Package (+1 Dependent package)
+       
+      Installed size: 3.9 M
+      Is this ok [y/N]: n
 
     root@localhost ~# rpm -e --nodeps vim-minimal
+    
+    root@localhost ~# yum install vim-enhanced
+      Loaded plugins: fastestmirror
+      Resolving Dependencies
+      --> Running transaction check
+      ---> Package vim-enhanced.x86_64 2:7.4.160-5.el7 will be installed
+      --> Finished Dependency Resolution
+
+      Dependencies Resolved
+
+      ==============================================================================================================
+       Package                         Arch                Version                   Repository                Size
+      ==============================================================================================================
+      Installing:
+       vim-enhanced                          x86_64              2:7.4.160-5.el7           base               1.0 M
+
+      Transaction Summary
+      ==============================================================================================================
+      Install  1 Package
+
+      Total download size: 1.0 M
+      Installed size: 2.2 M
+      Is this ok [y/d/N]: y
   
     root@localhost ~# package-cleanup --problems
      Loaded plugins: fastestmirror
