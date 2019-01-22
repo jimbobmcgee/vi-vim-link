@@ -46,13 +46,13 @@ This is much a chance for me to learn a bit about RPM packaging as it is to reso
 I fully-expect this has been fixed properly (by experienced package maintainers) in more-recent RHEL-based distros, but it hasn't made it to CentOS 7 yet, so I've knocked this up.
 
 ## Installation 
-  rpm -e --nodeps vim-minimal
-  yum install "https://raw.githubusercontent.com/jimbobmcgee/vi-vim-link/master/vi-vim-link-0.0.1-1.el7.noarch.rpm"
-  package-cleanup --problems
-  ls -l /usr/bin/vi*
+    rpm -e --nodeps vim-minimal
+    yum install "https://raw.githubusercontent.com/jimbobmcgee/vi-vim-link/master/vi-vim-link-0.0.1-1.el7.noarch.rpm"
+    package-cleanup --problems
+    ls -l /usr/bin/vi*
   
 ## Uninstall/Reversion
-  rpm -e --nodeps vi-vim-link
-  yum install vim-minimal
-  package-cleanup --problems
-  ls -l /usr/bin/vi*
+    rpm -e --nodeps vi-vim-link
+    yum install vim-minimal
+    package-cleanup --problems
+    ls -l /usr/bin/vi*
