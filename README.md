@@ -59,8 +59,8 @@ Removing **vim-minimal** (e.g. after installing **vim-enhanced**) will take **su
       Is this ok [y/d/N]: y
   
     root@localhost ~# package-cleanup --problems
-     Loaded plugins: fastestmirror
-     Package sudo-1.8.23-3.el7.x86_64 has missing requires of /usr/bin/vi
+      Loaded plugins: fastestmirror
+      Package sudo-1.8.23-3.el7.x86_64 has missing requires of /usr/bin/vi
 
 ## Caveat
 This is much a chance for me to learn a bit about RPM packaging as it is to resolve the dependency issue.  Use it at your own risk.  I'll happily take advisement on how to better package the workaround, or even better workarounds, but I'm not supporting this. :-)
