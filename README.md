@@ -34,7 +34,7 @@ Removing **vim-minimal** (e.g. after installing **vim-enhanced**) will take **su
 	 Installed size: 3.9 M
 	 Is this ok [y/N]: n
 
-    root@localhost ~# yum remove vim-minimal
+    root@localhost ~# rpm -e --nodeps vim-minimal
   
     root@localhost ~# package-cleanup --problems
      Loaded plugins: fastestmirror
