@@ -1,0 +1,2 @@
+#!/bin/sh
+rpmbuild -ba ./rpmbuild/SPECS/vi-vim-link.spec
